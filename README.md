@@ -12,8 +12,9 @@ Professional Digital Audio Routing System
 
 Engineering Archive
 
-Late 1990s
+Realized in 1995
 
 ──────────────────────────────────────
 
-
+![Digital Audio Patchbay](images/front.jpg)
+![Digital Audio Patchbay](images/inside.jpg)
