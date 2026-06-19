@@ -6,7 +6,7 @@ Engineering Audio Systems Since 1980
 
 RTAL-CDAD-001
 
-Digital Audio Patchbay
+Digital Audio Patchbay, Format Converter and Bitstream Manipulator
 
 Professional Digital Audio Routing System
 
