@@ -18,7 +18,7 @@
 
 <p align="center">
 
-<img src="images/Front.jpg" width="900">
+<img src="Front.jpg" width="900">
 
 *Figure 1 – Digital Audio Patchbay Prototype*
 
