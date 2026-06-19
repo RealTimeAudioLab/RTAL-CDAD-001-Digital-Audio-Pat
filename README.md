@@ -16,5 +16,5 @@ Realized in 1995
 
 ──────────────────────────────────────
 
-![Digital Audio Patchbay](front.jpg)
-![Digital Audio Patchbay](inside.jpg)
+![Digital Audio Patchbay](Front.jpg)
+![Digital Audio Patchbay](Inside.jpg)
