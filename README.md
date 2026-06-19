@@ -1,6 +1,6 @@
 RealTimeAudioLab
 
-Engineering Audio Systems Since 1980
+Engineering Audio Systems since 1980
 
 ──────────────────────────────────────
 
