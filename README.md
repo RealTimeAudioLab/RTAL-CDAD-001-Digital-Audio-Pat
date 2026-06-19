@@ -18,7 +18,7 @@
 
 <p align="center">
 
-<img src="Front.jpg" width="900">
+<img src="images/Front.jpg" width="900">
 
 *Figure 1 – Digital Audio Patchbay Prototype*
 
@@ -99,13 +99,13 @@ Rather than recreating the original work with modern tools, the original enginee
 
 ### Digital Audio Patchbay
 
-*(Front view)*
+<img src="images/Front.jpg" width="900">
 
 ---
 
 ### Internal Construction
 
-*(Inside view)*
+<img src="images/Inside.jpg" width="900">
 
 ---
 
