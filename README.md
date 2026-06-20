@@ -76,7 +76,6 @@ Its objectives included:
 * Flexible DSP insert loops
 * Integrated Sample Rate Converter
 * One-button SRC activation
-* S/PDIF bitstream modification
 * SCMS control
 * De-Emphasis control
 
