@@ -10,7 +10,7 @@
 
 ### Collection II · Classic Digital Audio Designs (1985–2020)
 
-**Engineering Audio Systems Since 1980**
+**Engineering Audio Systems since 1980**
 
 > *Preserving Engineering. Inspiring Future Designs.*
 
