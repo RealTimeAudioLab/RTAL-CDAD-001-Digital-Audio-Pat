@@ -120,13 +120,13 @@ Rather than recreating the original work with modern tools, the original enginee
 
 ---
 
-### Format Converter Board
+### Format-Converter Board
 
 <img src="images/Format_Converter_Board.jpg" width="400">
 
 ---
 
-### Input- Output- Interface Board
+### Input- Output- Interface Board for S/P-DIF and KOAX
 
 <img src="images/Input_Output_Interface_Board.jpg" width="900">
 
