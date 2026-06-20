@@ -42,7 +42,7 @@ The objective is to preserve this engineering work for future developers, studen
 | ------------------- | ------------------------------ |
 | Project ID          | RTAL-CDAD-001                  |
 | Collection          | Classic Digital Audio Designs  |
-| Development Period  | Late 1990s                     |
+| Development Period  | 1995                           |
 | Open Source Edition | 2026                           |
 | Status              | Engineering Archive            |
 | Hardware            | Original Prototype             |
