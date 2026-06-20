@@ -117,13 +117,13 @@ Rather than recreating the original work with modern tools, the original enginee
 
 ### CPU Controller Board
 
-<img src="images/Microcontroller_Board.jpg" width="900">
+<img src="images/Microcontroller_Board.jpg" width="400">
 
 ---
 
 ### Format Converter Board
 
-<img src="images/Format_Converter_Board.jpg" width="900">
+<img src="images/Format_Converter_Board.jpg" width="400">
 
 ---
 
