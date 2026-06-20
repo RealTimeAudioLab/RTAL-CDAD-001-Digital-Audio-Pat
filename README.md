@@ -20,13 +20,14 @@
 
 <img src="images/Front.jpg" width="900">
 
-*Figure 1 – Digital Audio Patchbay Front*
+*Figure 1 – Digital Audio Patchbay Frontview*
 
 </p>
+---
 
 <img src="images/Back.jpg" width="900">
 
-*Figure 1 – Digital Audio Patchbay Back*
+*Figure 2 – Digital Audio Patchbay Backview*
 
 </p>
 ---
@@ -104,19 +105,31 @@ Rather than recreating the original work with modern tools, the original enginee
 
 ### Digital Audio Patchbay
 
-<img src="images/Front.jpg" width="900">
+<img src="images/FrontInside.jpg" width="900">
 
 ---
 
 ### Internal Construction
 
-<img src="images/Inside.jpg" width="900">
+<img src="images/BackInside.jpg" width="900">
 
 ---
 
-### CPU Controller
+### CPU Controller Board
 
-*(PCB photograph)*
+<img src="images/Microcontroller_Board.jpg" width="900">
+
+---
+
+### Format Converter Board
+
+<img src="images/Format_Converter_Board.jpg" width="900">
+
+---
+
+### Input- Output- Interface Board
+
+<img src="images/Input_Output_Interface_Board.jpg" width="900">
 
 ---
 
