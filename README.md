@@ -18,14 +18,14 @@
 
 <p align="center">
 
-<img src="images/Front.jpg" width="900">
+<img src="images/Front.JPG" width="900">
 
 *Figure 1 – Digital Audio Patchbay Frontview*
 
 </p>
 ---
 
-<img src="images/Back.jpg" width="900">
+<img src="images/Back.JPG" width="900">
 
 *Figure 2 – Digital Audio Patchbay Backview*
 
