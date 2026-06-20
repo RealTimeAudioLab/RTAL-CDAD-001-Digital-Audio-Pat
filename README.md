@@ -20,10 +20,15 @@
 
 <img src="images/Front.jpg" width="900">
 
-*Figure 1 – Digital Audio Patchbay Prototype*
+*Figure 1 – Digital Audio Patchbay Front*
 
 </p>
 
+<img src="images/Back.jpg" width="900">
+
+*Figure 1 – Digital Audio Patchbay Back*
+
+</p>
 ---
 
 # About this Repository
