@@ -1,75 +1,119 @@
-# CPLD Digital Audio Router
+# Xilinx XC9572 CPLD Digital Audio Router
 
-> **Engineering Heritage Archive**
-> Original CPLD implementation of the **RTAL Digital Audio Patchbay**
-
----
-
-# Digital Audio Routing Logic
-
-This directory contains the complete CPLD implementation used inside the RTAL Digital Audio Patchbay.
-
-The design is based on a **Xilinx XC9572-15-PC84** CPLD and implements the complete hardware routing logic for multiple S/PDIF digital audio sources.
-
-Unlike a DSP, FPGA or microcontroller, the CPLD performs **pure hardware routing** with deterministic timing and virtually zero latency.
+> *"When a handful of TTL multiplexers became the weakest link in a professional digital audio system, the solution was not another PCB revision—it was the migration to a Xilinx XC9572 CPLD."*
 
 ---
 
-# Why a CPLD?
+# Engineering Heritage Archive
 
-The very first prototype of the Digital Audio Patchbay used several **74LS150 16-channel multiplexers** as the routing logic.
+This directory preserves the complete CPLD implementation developed for the **RTAL Digital Audio Patchbay**.
 
-While the design worked correctly during development, a reliability issue became apparent during continuous operation inside a professional studio rack.
+Rather than serving as an audio processor, the CPLD acts as the **digital switching matrix** for the entire system, routing multiple S/PDIF sources to several independent destinations with deterministic hardware timing and virtually zero latency.
 
-After several hours of operation, the temperature inside the rack increased significantly. Under these conditions, the 74LS150 devices occasionally introduced disturbances on the high-speed S/PDIF signals.
+The archive contains the original engineering files, preserving both the implementation and the engineering decisions behind the project.
 
-Although the logic itself continued to function, the signal integrity degraded enough to produce audible clicks, dropouts and digital artefacts during audio playback.
+---
 
-To eliminate this problem permanently, the complete routing logic was redesigned and implemented inside a **Xilinx XC9572 CPLD**.
+# Background
 
-The CPLD replacement provided several important advantages:
+The RTAL Digital Audio Patchbay was designed as a central routing system for a professional digital audio studio.
 
-* Excellent signal integrity
-* Deterministic hardware timing
-* Extremely low propagation delay
-* Lower component count
-* Improved long-term reliability
-* Simplified PCB routing
-* Greater flexibility for future modifications
+Its purpose was to connect multiple digital audio sources—including CD players, DAT recorders, DCC recorders, PC audio interfaces and other S/PDIF equipment—to several independent digital outputs without unnecessary signal processing.
 
-The result was a stable system capable of continuous 24/7 operation without the temperature-related signal degradation observed in the original TTL implementation.
+From the very beginning, one design goal was absolute transparency:
+
+> **The digital audio data should never be modified—only routed.**
+
+The CPLD therefore performs pure hardware switching without buffering, resampling or software intervention.
+
+---
+
+# From TTL Logic to CPLD
+
+The earliest prototype implemented the routing logic using several **74LS150 16-channel multiplexers**.
+
+Initially, this solution appeared to be reliable and fulfilled all functional requirements.
+
+However, extended operation inside a fully populated 19-inch studio rack revealed an unexpected issue.
+
+During long recording and mixing sessions, the ambient temperature inside the rack increased considerably.
+
+Although the 74LS150 devices continued to operate within specification, they occasionally introduced timing variations and signal integrity problems on the high-speed S/PDIF signals.
+
+The effects included:
+
+* occasional digital clicks
+* short audio dropouts
+* increased jitter sensitivity
+* unstable behaviour after several hours of continuous operation
+
+These effects were extremely difficult to reproduce under laboratory conditions but became noticeable during professional studio use.
+
+Rather than attempting incremental improvements with additional TTL circuitry, the complete routing logic was redesigned.
+
+The entire switching matrix was migrated into a **Xilinx XC9572 CPLD**, eliminating the temperature-dependent behaviour while significantly simplifying the hardware.
+
+This redesign proved to be completely reliable during continuous studio operation.
+
+---
+
+# Why the XC9572?
+
+The XC9572 offered several advantages over discrete TTL logic.
+
+## Deterministic Hardware
+
+All routing decisions are implemented directly in programmable hardware.
+
+No software timing is involved once the control bus has been updated.
+
+---
+
+## Signal Integrity
+
+Replacing multiple cascaded TTL multiplexers with a single CPLD significantly reduced propagation delay and improved signal quality on the S/PDIF lines.
+
+---
+
+## Reduced Component Count
+
+Instead of numerous logic ICs and associated glue logic, the entire routing controller became a single programmable device.
+
+---
+
+## Flexibility
+
+Future routing modifications required only a CPLD update instead of a PCB redesign.
 
 ---
 
 # System Architecture
 
 ```text
-                     Microcontroller
-                           │
-                Parallel Control Bus
-               (A1...A4, B5...B8, ...)
-                           │
-                           ▼
-                +----------------------+
-                |  Xilinx XC9572 CPLD  |
-                | Digital Audio Router |
-                +----------------------+
-          │          │          │
-          ▼          ▼          ▼
-      DA_OUT     REC1_OUT   REC2_OUT
-          │          │          │
-          └────── Digital Audio Matrix ──────┘
+                 System Microcontroller
+                          │
+                 Parallel Control Bus
+          A1...A4  B5...B8  C9...C12  D13...D15  E16...E19
+                          │
+                          ▼
+             +-----------------------------+
+             |     Xilinx XC9572 CPLD      |
+             |     Digital Audio Router    |
+             +-----------------------------+
+          │         │          │          │
+          ▼         ▼          ▼          ▼
+      DA_OUT    REC1_OUT   REC2_OUT   DIG_OUT
 ```
 
 The microcontroller simply selects the desired routing configuration.
 
-The CPLD immediately performs all switching operations entirely in hardware.
+The CPLD performs all switching autonomously in hardware.
 
 ---
 
-# Digital Audio Sources
+# Supported Digital Sources
 
-Each source provides both optical (TOSLINK) and coaxial S/PDIF inputs.
+Every input is available as both optical (TOSLINK) and coaxial S/PDIF.
 
 | Source        | Optical | Coaxial |
 | ------------- | :-----: | :-----: |
@@ -85,9 +129,9 @@ Each source provides both optical (TOSLINK) and coaxial S/PDIF inputs.
 
 # Output Destinations
 
-The CPLD routes the selected source to one or more outputs simultaneously.
+The CPLD independently controls the routing towards:
 
-* DA Converter
+* Digital-to-Analog Converter
 * Digital Output
 * Recorder 1
 * Recorder 2
@@ -97,15 +141,15 @@ The CPLD routes the selected source to one or more outputs simultaneously.
 * Front Connector
 * Error Output
 
-Multiple outputs can be active at the same time.
+Multiple destinations may be active simultaneously.
 
 ---
 
-# Control Bus
+# Control Interface
 
-The CPLD is controlled through a dedicated parallel interface.
+The CPLD communicates with the system controller through a dedicated parallel control bus.
 
-```text
+```
 A1...A4
 B5...B8
 C9...C12
@@ -113,49 +157,69 @@ D13...D15
 E16...E19
 ```
 
-The microcontroller generates the required control words while the CPLD performs all routing internally.
+Each control word represents a routing configuration.
 
-This architecture keeps the firmware simple while guaranteeing deterministic hardware switching.
-
----
-
-# Original Design Files
-
-This archive preserves the original engineering files.
-
-```
-*.abl   Original ABEL source code
-*.jed   Programming file
-*.pad   Pin assignments
-*.rpt   Fitter report
-*.vhf   Generated VHDL netlist
-*.prj   Project files
-```
-
-These files represent the original implementation and allow the CPLD to be studied, documented and reprogrammed.
+The CPLD decodes these signals internally and immediately establishes the requested digital connections.
 
 ---
 
-# Engineering Notes
+# Original Engineering Files
 
-This design represents an interesting example of digital hardware engineering from the late 1990s and early 2000s.
+This archive includes the original development files.
 
-At that time, CPLDs offered an elegant alternative to large numbers of discrete TTL devices.
+| File   | Description               |
+| ------ | ------------------------- |
+| `.abl` | Original ABEL source code |
+| `.jed` | Programming file          |
+| `.pad` | Pin assignment report     |
+| `.rpt` | Device utilisation report |
+| `.vhf` | Generated VHDL netlist    |
+| `.prj` | Project files             |
+| `.ngc` | Synthesized netlist       |
 
-Replacing the original TTL routing logic with a programmable CPLD not only reduced component count but also significantly improved signal integrity and long-term operational stability.
+These files document the original implementation and allow the design to be studied, archived and programmed into compatible XC9572 devices.
 
-The project demonstrates how practical engineering decisions are often driven by real-world operating conditions rather than theoretical circuit design alone.
+---
+
+# Historical Significance
+
+This project reflects a period when CPLDs became an elegant replacement for increasingly complex TTL logic.
+
+The migration from discrete multiplexers to programmable logic solved a real-world reliability problem while simultaneously reducing hardware complexity.
+
+It demonstrates how engineering decisions are often driven by practical experience gained during long-term operation rather than theoretical design considerations alone.
 
 ---
 
 # Preservation
 
-This directory is maintained as part of the **RTAL Engineering Heritage Archive**.
+This repository preserves the original CPLD implementation as part of the **RTAL Engineering Heritage Archive**.
 
-The original source files are preserved in their original form whenever possible to document the engineering decisions, implementation techniques and digital hardware design methods used during the development of the RTAL Digital Audio Patchbay.
+The design remains available for documentation, educational purposes, historical preservation and future restoration of the original Digital Audio Patchbay hardware.
+
+---
+
+## Design Information
+
+**Device**
+
+* Xilinx XC9572-15-PC84
+
+**Original Development**
+
+* ABEL HDL
+* Xilinx ISE
+
+**Function**
+
+Digital S/PDIF Routing Matrix
+
+---
+
+> *"Good engineering is often invisible. When everything works flawlessly, the design quietly disappears behind the music."*
 
 ---
 
 © RTAL – RealTimeAudioLab
 
-Engineering Heritage Archive
+**Engineering Heritage Archive**
