@@ -43,6 +43,7 @@ The original hardware used multiplexers and GAL logic. During the second hardwar
 ## Version 2
 
 * CPLD replacing the complete LS150/GAL routing logic
+* Error Signal from Crystal CS8412 Digital Audio Receiver used from CS8412 on DAC Board
 
 ## Supporting Components
 
