@@ -10,7 +10,7 @@ use aim.components.all;
 library unisim;
 use unisim.Vcomponents.all;
 
-entity spdif_pr is
+entity cpld is
 port (
     CD_opt : in std_logic;
     CD_kx : in std_logic;
