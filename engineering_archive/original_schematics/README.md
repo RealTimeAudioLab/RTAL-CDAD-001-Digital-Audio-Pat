@@ -43,6 +43,7 @@ The original hardware used multiplexers and GAL logic. During the second hardwar
 ## Version 2
 
 * CPLD replacing the complete LS150/GAL routing logic
+* Error Signal from Crystal CS8412 Digital Audio Receiver used from CS8412 on DAC Board
 
 ## Supporting Components
 
@@ -71,7 +72,8 @@ Audio Matrix Part 2 mirrors the architecture of Part 1 and completes the routing
 
 ## Version 2
 
-* CPLD replacing the LS150 and GAL logic
+* CPLD replacing the complete LS150/GAL routing logic
+* Error Signal from Crystal CS8412 Digital Audio Receiver used from CS8412 on DAC Board
 
 ## Supporting Components
 
@@ -122,7 +124,6 @@ The Digital Format Converter is an independent subsystem providing digital audio
 | Crystal CS8402A       | Digital Audio Transmitter      |
 | Analog Devices AD1893 | Sample Rate / Format Converter |
 | Crystal CS8412        | Digital Audio Receiver         |
-| ILQ74                 | Optocoupler                    |
 
 > **Function:**
 > Stand-alone digital audio format conversion module.
