@@ -34,7 +34,7 @@
 
 # About this Repository
 
-This repository preserves the complete engineering archive of the **Digital Audio Patchbay**, a professional digital audio routing system developed during the late 1990s.
+This repository preserves the complete engineering archive of the **Digital Audio Patchbay**, a professional digital audio routing system developed during 1995.
 
 Unlike most open-source repositories, this project documents not only the software but the complete engineering process, including original hardware, firmware, programmable logic, historical design documents and prototype photographs.
 
@@ -79,6 +79,8 @@ Its objectives included:
 * SCMS control
 * De-Emphasis control
 
+“I wanted a central routing system that allowed every optical and coaxial digital input and output of my complete music system to be controlled according to my own requirements.”
+
 The Digital Audio Patchbay has been an integral part of the author's setup since 1995.
 To the author's knowledge, no comparable product combining these functions was commercially available at that time.
 
@@ -121,6 +123,12 @@ Rather than recreating the original work with modern tools, the original enginee
 
 ---
 
+### CPLD Board
+
+<img src="images/CPLD_Board.jpg" width="400">
+
+---
+
 ### Format-Converter Board
 
 <img src="images/Format_Converter_Board.jpg" width="400">
@@ -143,7 +151,8 @@ Rather than recreating the original work with modern tools, the original enginee
 
 One of the most valuable parts of this repository is the collection of original hand-drawn engineering schematics.
 
-These drawings have intentionally been preserved in their original form.
+Unlike modern CAD-generated schematics, the original circuit diagrams are preserved in their hand-drawn form.
+These drawings document the actual engineering process and therefore remain part of the historical documentation.
 
 They document the actual engineering process and therefore form an important part of the historical archive.
 
@@ -153,6 +162,19 @@ Included are:
 * Audio Matrix
 * Format Converter
 * Digital Routing Logic
+
+•	One central digital audio router for the complete music system.
+•	Support for optical and coaxial S/PDIF.
+•	Flexible routing of all digital inputs and outputs.
+•	Independent monitoring and recording paths.
+•	Integrated sample rate converter.
+•	Sample rate converter selectable by a single key press.
+•	Multiple external DSP insert loops.
+•	Direct manipulation of selected S/PDIF channel status bits.
+•	SCMS modification.
+•	De-Emphasis modification.
+•	High operational simplicity.
+•	Reliable real-time operation.
 
 ---
 
@@ -176,9 +198,9 @@ The complete firmware has been written entirely in **Intel 8051 Assembly Languag
 
 No C compiler has been used.
 
-Every hardware resource, timing requirement and memory location has been implemented manually.
+Every hardware function, timing requirement and peripheral interface was implemented manually without the use of a C compiler.
 
-Today, complete embedded systems of this complexity written entirely in assembly language have become increasingly rare.
+Today, complete embedded systems of this complexity written entirely in assembly language have become increasingly rare, making this repository an interesting historical reference for embedded software engineering.
 
 ---
 
