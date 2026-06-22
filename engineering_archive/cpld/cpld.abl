@@ -1,4 +1,4 @@
-MODULE spdif_pr
+MODULE cpld
 
 CD_opt pin 75;
 CD_kx pin 80;
@@ -19,7 +19,7 @@ A2_kx pin 13;
 DSP_opt pin 14;
 DSP_kx pin 15;
 AUX_opt pin 18;
-AUX_kx pin 19;
+AUX_kx pinÂ 19;
 
 A1 pin 68;
 A2 pin 69;
