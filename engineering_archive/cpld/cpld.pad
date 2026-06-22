@@ -8,8 +8,8 @@ such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
 character is used as the data field separator.
 This file is also designed to support parsing.
 
-Input file:  spdif_pr.ngd
-output file: spdif_pr.pad
+Input file:  cpld.ngd
+output file: cpld.pad
 Part type:   xc9572
 Speed grade: -15
 Package:     pc84
