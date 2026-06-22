@@ -1,3 +1,14 @@
+# The RTAL Digital Audio Patchbay in its original working environment
+Developed as the digital backbone of a complete studio system.
+
+<p align="center">
+  
+<img src="images/RTAL_Studio_1.jpg" width="450">
+<img src="images/RTAL_Studio_2.jpg" width="450">
+  
+*Figure 1 – The RTAL Digital Audio Patchbay in its original working environment*
+</p>
+
 # RTAL-CDAD-001
 
 # Digital Audio Patchbay
@@ -21,16 +32,12 @@
 <img src="images/Front.jpg" width="900">
 
 *Figure 1 – Digital Audio Patchbay Frontview*
-
 </p>
----
 
 <img src="images/Back.jpg" width="900">
 
 *Figure 2 – Digital Audio Patchbay Backview*
-
 </p>
----
 
 # About this Repository
 
