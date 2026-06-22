@@ -72,7 +72,8 @@ Audio Matrix Part 2 mirrors the architecture of Part 1 and completes the routing
 
 ## Version 2
 
-* CPLD replacing the LS150 and GAL logic
+* CPLD replacing the complete LS150/GAL routing logic
+* Error Signal from Crystal CS8412 Digital Audio Receiver used from CS8412 on DAC Board
 
 ## Supporting Components
 
