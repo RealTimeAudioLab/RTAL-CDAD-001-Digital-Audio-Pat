@@ -3,7 +3,7 @@ Developed as the digital backbone of a complete studio system.
 
 <p align="center">
   
-<img src="images/RTAL_Studio_2.jpg" width="900">
+<img src="images/RTAL_Studio_21.jpg" width="900">
   
 *Figure 1 – The RTAL Digital Audio Patchbay in its original 2002 working environment*
 </p>
