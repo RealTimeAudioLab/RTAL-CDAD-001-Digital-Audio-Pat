@@ -40,6 +40,12 @@ Developed as the digital backbone of a complete studio system.
 
 # About this Repository
 
+Every engineering project begins with a problem.
+
+During the mid-1990s digital audio equipment rapidly increased in complexity.
+
+The RTAL Digital Audio Patchbay was developed to become the central switching system of an entire digital recording studio.
+
 This repository preserves the complete engineering archive of the **Digital Audio Patchbay**, a professional digital audio routing system developed during 1995.
 
 Unlike most open-source repositories, this project documents not only the software but the complete engineering process, including original hardware, firmware, programmable logic, historical design documents and prototype photographs.
