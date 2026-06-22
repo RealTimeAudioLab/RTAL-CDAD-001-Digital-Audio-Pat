@@ -256,6 +256,20 @@ The repository therefore documents not only the finished system but also the eng
 
 ---
 
+# Lessons Learned
+
+The original TTL design worked perfectly.
+
+Until it didn't.
+
+Only long-term operation inside a warm studio rack revealed a problem that could never be reproduced on the laboratory bench.
+
+Replacing dozens of TTL gates by a single CPLD solved the issue permanently.
+
+Engineering is often driven by observation rather than theory.
+
+---
+
 # Historical Preservation
 
 This repository intentionally preserves
