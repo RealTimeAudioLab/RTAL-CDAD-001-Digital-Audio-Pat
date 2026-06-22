@@ -79,6 +79,7 @@ Its objectives included:
 * SCMS control
 * De-Emphasis control
 
+The Digital Audio Patchbay has been an integral part of the author's setup since 1995.
 To the author's knowledge, no comparable product combining these functions was commercially available at that time.
 
 ---
