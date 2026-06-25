@@ -2,7 +2,7 @@
 GAL20V8
 EQN2JED - Boolean Equations to JEDEC file assembler (Version V003)
 Copyright (R) National Semiconductor Corporation 1990,1991
-Assembled from "okconnmc.equ". Date: 4-29-96
+Assembled from "Gal.equ". Date: 4-29-96
 *
 QF2706*QP24*F0*
 L0000
