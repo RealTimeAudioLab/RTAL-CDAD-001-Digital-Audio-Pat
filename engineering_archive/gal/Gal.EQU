@@ -1,9 +1,9 @@
-chip okconnmc gal20v8
+chip Gal gal20v8
 
    a0 a1 a2   a3   a15   wr   rd   nc   nc   nc   nc gnd
    nc nc out1 out2 out3  out4 out5 out6 out7 out8 nc vcc
 
-@ues okconnmc
+@ues Gal
 
 equations
 
