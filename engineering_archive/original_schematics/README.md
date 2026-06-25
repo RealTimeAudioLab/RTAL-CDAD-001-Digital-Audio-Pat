@@ -119,11 +119,13 @@ The Digital Format Converter is an independent subsystem providing digital audio
 
 ## Main Components
 
-| Component             | Description                    |
-| --------------------- | ------------------------------ |
-| Crystal CS8402A       | Digital Audio Transmitter      |
-| Analog Devices AD1893 | Sample Rate / Format Converter |
-| Crystal CS8412        | Digital Audio Receiver         |
+| Component                  | Description                    |
+| -------------------------- | ------------------------------ |
+| Crystal CS8402A            | Digital Audio Transmitter      |
+| Analog Devices AD1893      | Sample Rate / Format Converter |
+| Crystal CS8412             | Digital Audio Receiver         |
+  74LS574 (Control Bits)
+  74LS245 (Set Control Bits)
 
 > **Function:**
 > Stand-alone digital audio format conversion module.
